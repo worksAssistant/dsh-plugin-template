@@ -1,0 +1,8 @@
+# pnpm settings for this package. `allowBuilds` (pnpm 10.20+/11) replaces
+# the old onlyBuiltDependencies allowlist: esbuild runs its postinstall to
+# set up its platform binary; everything else is left blocked by default.
+packages:
+  - .
+
+allowBuilds:
+  esbuild: true

@@ -1,0 +1,12 @@
+# dsh-plugin-template — profile patch layer.
+#
+# This file is REQUIRED: it is what makes the package installable via
+# `dsh plugin --profile web add <this-package>`. Declaring only `dsh.client`
+# in package.json is NOT enough — the market's CI rejects it.
+#
+# The entry below inserts one cordis loader entry (id + package name). The
+# browser half is picked up automatically by dsh-client-modules through the
+# package's `dsh.client` declaration — no extra work here.
+- insert:
+    - id: dsh-plugin-template
+      name: 'dsh-plugin-template'
