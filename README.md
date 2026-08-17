@@ -61,7 +61,7 @@ dsh plugin --profile web add .
 
 ```sh
 # 1. 先重命名（见下），并在 package.json 里设置 repository 指向你的 GitHub 仓库
-#    "repository": { "type": "git", "url": "git+https://github.com/works/dsh-plugin-template.git" }
+#    "repository": { "type": "git", "url": "git+https://github.com/worksAssistant/dsh-plugin-template.git" }
 # 2. 登录并发布
 npm login
 npm publish
@@ -80,11 +80,11 @@ npm publish
    - 有真实可用代码（占位/纯 README 不收）；
    - 打上 [`dsh-plugin`](https://github.com/topics/dsh-plugin) topic；
    - 描述只写功能、不夸大（会对照源码核验）。
-2. 新增 `data/plugins/works__dsh-plugin-template.yml`：
+2. 新增 `data/plugins/worksAssistant__dsh-plugin-template.yml`：
 
    ```yaml
-   url: https://github.com/works/dsh-plugin-template
-   name: works/dsh-plugin-template
+   url: https://github.com/worksAssistant/dsh-plugin-template
+   name: worksAssistant/dsh-plugin-template
    category: ui            # ui usage theme model session memory tools vision skill workflow notify dev market fun
    description:
      en: One-line description ending with a period.
