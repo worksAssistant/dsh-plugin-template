@@ -1,6 +1,6 @@
 # Contributing / 贡献指南
 
-感谢你关注 dsh-cheatsheet！本仓库采用 DSH（DeepSeek Harness）插件标准结构。
+感谢你关注 dsh-quickref！本仓库采用 DSH（DeepSeek Harness）插件标准结构。
 
 ## 开发环境
 
@@ -32,7 +32,7 @@ chore: 杂项
 
 - 仓库需打上 [`dsh-plugin`](https://github.com/topics/dsh-plugin) topic。
 - 上架入口：向 [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) 提交
-  `data/plugins/worksAssistant__dsh-cheatsheet.yml`（详见 README 上架章节）。
+  `data/plugins/worksAssistant__dsh-quickref.yml`（详见 README 上架章节）。
 
 ## 速查内容贡献
 

@@ -1,11 +1,11 @@
 {
-  "name": "dsh-cheatsheet",
+  "name": "dsh-quickref",
   "version": "0.1.0",
   "description": "Developer quick-reference toolbox for DeepSeek Harness (DSH): 12 themed categories (195 entries) + zero-dependency dev tools (regex tester, JSON format, timestamp, Base64/URL codec, cron generator, line diff). 开发者速查工具箱。",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/worksAssistant/dsh-cheatsheet.git"
+    "url": "git+https://github.com/worksAssistant/dsh-quickref.git"
   },
   "type": "module",
   "main": "lib/index.js",

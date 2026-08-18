@@ -44,8 +44,8 @@ await build({
 })
 
 // Client module id must match the package name (the loader keys modules by
-// package name, e.g. /plugins/dsh-cheatsheet/client.js).
-const CLIENT_ID = 'dsh-cheatsheet'
+// package name, e.g. /plugins/dsh-quickref/client.js).
+const CLIENT_ID = 'dsh-quickref'
 
 await build({
   ...shared,

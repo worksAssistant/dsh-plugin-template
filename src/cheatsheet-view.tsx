@@ -1,5 +1,5 @@
 /**
- * dsh-plugin-cheatsheet — 「速查」页：按主题分类的可搜索速查表。
+ * dsh-quickref — 「速查」页：按主题分类的可搜索速查表。
  */
 import { useMemo, useState } from 'react'
 import type { CSSProperties, ReactElement } from 'react'

@@ -1,11 +1,11 @@
-# dsh-cheatsheet
+# dsh-quickref
 
 **开发者速查工具箱**：面向 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（DSH）的插件。设置页「开发者速查」分区提供按主题分类、可搜索的速查表（12 类 195 条），以及 6 个零依赖开发工具（正则实时测试 / JSON 格式化 / 时间戳转换 / Base64\/URL 编解码 / Cron 生成 / 文本 Diff）。
 
 ## 目录结构
 
 ```
-dsh-cheatsheet/
+dsh-quickref/
 ├── package.json          # dsh.bundle / dsh.client 声明、peerDependencies、发布配置
 ├── cordis.patch.yml      # ★ 主机端 loader 条目（上架硬性要求，缺它无法安装）
 ├── tsconfig.json         # 类型检查（noEmit）
@@ -38,8 +38,8 @@ dsh plugin --profile web add .
 ```
 
 - 等价于 `pnpm add <绝对路径>`（symlink 形式），改完代码重新 `npm run build` 即生效；
-- 验证：`dsh plugin --profile web install` 通过，`--dump-config` 输出里能看到 `dsh-cheatsheet` 条目，然后重启桌面客户端；
-- 卸载：`dsh plugin --profile web remove dsh-cheatsheet`。
+- 验证：`dsh plugin --profile web install` 通过，`--dump-config` 输出里能看到 `dsh-quickref` 条目，然后重启桌面客户端；
+- 卸载：`dsh plugin --profile web remove dsh-quickref`。
 
 > ⚠️ 不要用 `/tmp` 下的路径做 link 安装——macOS 清空 /tmp 后客户端会因解析不到 bundle 而崩溃（血的教训）。务必用持久目录。
 
@@ -61,7 +61,7 @@ dsh plugin --profile web add .
 
 ```sh
 # 1. 先重命名（见下），并在 package.json 里设置 repository 指向你的 GitHub 仓库
-#    "repository": { "type": "git", "url": "git+https://github.com/worksAssistant/dsh-cheatsheet.git" }
+#    "repository": { "type": "git", "url": "git+https://github.com/worksAssistant/dsh-quickref.git" }
 # 2. 登录并发布
 npm login
 npm publish
@@ -80,11 +80,11 @@ npm publish
    - 有真实可用代码（占位/纯 README 不收）；
    - 打上 [`dsh-plugin`](https://github.com/topics/dsh-plugin) topic；
    - 描述只写功能、不夸大（会对照源码核验）。
-2. 新增 `data/plugins/worksAssistant__dsh-cheatsheet.yml`：
+2. 新增 `data/plugins/worksAssistant__dsh-quickref.yml`：
 
    ```yaml
-   url: https://github.com/worksAssistant/dsh-cheatsheet
-   name: worksAssistant/dsh-cheatsheet
+   url: https://github.com/worksAssistant/dsh-quickref
+   name: worksAssistant/dsh-quickref
    category: ui            # ui usage theme model session memory tools vision skill workflow notify dev market fun
    description:
      en: One-line description ending with a period.
@@ -102,7 +102,7 @@ npm publish
 
 ## 发布前清单（rename checklist）
 
-- [ ] 全局替换包名：`dsh-cheatsheet` → 你的包名（package.json、cordis.patch.yml、src/client.ts 里的 id、README）
+- [ ] 全局替换包名：`dsh-quickref` → 你的包名（package.json、cordis.patch.yml、src/client.ts 里的 id、README）
 - [ ] `package.json` 的 `repository` 设置为你的 GitHub 仓库
 - [ ] `description` 改为一句准确的功能描述
 - [ ] `dsh.client.inject` 按实际用到的官方 client 包增删（例如用到多语言就加 `@deepseek-ai/dsh-client-locale`）

@@ -1,5 +1,5 @@
 /**
- * dsh-plugin-cheatsheet — browser half (client plugin bundle).
+ * dsh-quickref — browser half (client plugin bundle).
  *
  * 本文件经 build.mjs 编译为「lazy-CJS module table」形态（window.__ModuleLoader__
  * .load），所以这里只导出 cordis 插件对象（inject + apply），不需要手动调用 load。

@@ -1,6 +1,6 @@
 # 开发指南
 
-dsh-cheatsheet（开发者速查工具箱）的代码结构与开发流程说明。
+dsh-quickref（开发者速查工具箱）的代码结构与开发流程说明。
 
 ## 目录结构
 
@@ -32,7 +32,7 @@ npm run check:market # 发布前检查
 
 ```js
 window.__ModuleLoader__.load({
-  id: 'dsh-cheatsheet',
+  id: 'dsh-quickref',
   factory: (require) => { /* 所有 require 必须在 factory 内 */ },
 })
 ```
@@ -47,7 +47,7 @@ window.__ModuleLoader__.load({
 
 ```sh
 dsh plugin --profile web add .     # link 安装（持久目录，勿用 /tmp）
-dsh plugin --profile web remove dsh-cheatsheet   # 卸载
+dsh plugin --profile web remove dsh-quickref   # 卸载
 ```
 
 改代码后重新 `npm run build`，重启客户端生效。

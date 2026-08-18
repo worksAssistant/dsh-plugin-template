@@ -1,4 +1,4 @@
-# dsh-cheatsheet — profile patch layer.
+# dsh-quickref — profile patch layer.
 #
 # This file is REQUIRED: it is what makes the package installable via
 # `dsh plugin --profile web add <this-package>`. Declaring only `dsh.client`
@@ -8,5 +8,5 @@
 # browser half is picked up automatically by dsh-client-modules through the
 # package's `dsh.client` declaration — no extra work here.
 - insert:
-    - id: dsh-cheatsheet
-      name: 'dsh-cheatsheet'
+    - id: dsh-quickref
+      name: 'dsh-quickref'

@@ -1,5 +1,5 @@
 /**
- * dsh-plugin-cheatsheet — host half.
+ * dsh-quickref — host half.
  *
  * 目前是惰性 loader 条目：全部 UI 由浏览器半部（`./client`）承载，DSH 的
  * dsh-client-modules 通过 `dsh.client` 声明自动拾取。
