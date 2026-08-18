@@ -18,6 +18,8 @@ export interface CheatCategory {
   id: string
   title: string
   icon: string
+  /** 分类一句话简介（可选） */
+  desc?: string
   entries: CheatEntry[]
 }
 
@@ -26,6 +28,7 @@ export const CHEATSHEET: CheatCategory[] = [
     id: 'git',
     title: 'Git 常用命令',
     icon: '🔀',
+    desc: '常用工作流：状态、提交、分支、合并、回滚、历史',
     entries: [
       { key: 'git status', desc: '查看工作区与暂存区状态' },
       { key: 'git add', desc: '暂存改动', code: 'git add <file> | git add -A' },
@@ -53,6 +56,7 @@ export const CHEATSHEET: CheatCategory[] = [
     id: 'commits',
     title: 'Git 提交规范',
     icon: '✍️',
+    desc: 'Conventional Commits 类型与示例',
     entries: [
       { key: 'feat', desc: '新功能', code: 'feat: 新增用户登录' },
       { key: 'fix', desc: '修复 bug', code: 'fix: 修复空指针崩溃' },
@@ -73,6 +77,7 @@ export const CHEATSHEET: CheatCategory[] = [
     id: 'regex',
     title: '正则表达式',
     icon: '🎯',
+    desc: '元字符、量词、分组断言与常用模式',
     entries: [
       { key: '.', desc: '任意单个字符（除换行）' },
       { key: '^ $', desc: '行首 / 行尾锚定', code: '^abc$' },
@@ -100,6 +105,7 @@ export const CHEATSHEET: CheatCategory[] = [
     id: 'http',
     title: 'HTTP 状态码',
     icon: '🌐',
+    desc: '常用响应码含义速查',
     entries: [
       { key: '200', desc: 'OK 成功' },
       { key: '201', desc: 'Created 已创建（POST）' },
@@ -125,6 +131,7 @@ export const CHEATSHEET: CheatCategory[] = [
     id: 'linux',
     title: 'Linux 命令',
     icon: '🐧',
+    desc: '文件、进程、网络与服务的常用命令',
     entries: [
       { key: 'ls', desc: '列目录', code: 'ls -lah' },
       { key: 'cd', desc: '切换目录', code: 'cd ~ / .. / -' },
@@ -156,6 +163,7 @@ export const CHEATSHEET: CheatCategory[] = [
     id: 'docker',
     title: 'Docker 命令',
     icon: '🐳',
+    desc: '镜像、容器与编排的常用命令',
     entries: [
       { key: 'docker build', desc: '构建镜像', code: 'docker build -t name:tag .' },
       { key: 'docker run', desc: '运行容器', code: 'docker run -d -p 8080:80 name' },
@@ -180,6 +188,7 @@ export const CHEATSHEET: CheatCategory[] = [
     id: 'sql',
     title: 'SQL 速查',
     icon: '🗄️',
+    desc: 'CRUD、连接、聚合与索引',
     entries: [
       { key: 'SELECT', desc: '查询', code: 'SELECT col FROM t WHERE x = 1' },
       { key: 'INSERT', desc: '插入', code: 'INSERT INTO t (a,b) VALUES (1,2)' },
@@ -204,6 +213,7 @@ export const CHEATSHEET: CheatCategory[] = [
     id: 'terminal',
     title: '终端快捷键',
     icon: '⌨️',
+    desc: 'macOS/Linux 终端快捷键',
     entries: [
       { key: 'Ctrl+C', desc: '中断当前命令' },
       { key: 'Ctrl+D', desc: 'EOF / 退出 shell' },
@@ -225,6 +235,7 @@ export const CHEATSHEET: CheatCategory[] = [
     id: 'markdown',
     title: 'Markdown 语法',
     icon: '📝',
+    desc: '常用 Markdown 语法',
     entries: [
       { key: '标题', desc: '1-6 级标题', code: '# H1 ## H2 ### H3' },
       { key: '加粗/斜体', desc: '强调', code: '**粗** *斜* ~~删除线~~' },
@@ -244,6 +255,7 @@ export const CHEATSHEET: CheatCategory[] = [
     id: 'javascript',
     title: 'JavaScript 速查',
     icon: '🟨',
+    desc: '高频数组、字符串、对象方法与异步',
     entries: [
       { key: 'map', desc: '映射数组', code: 'arr.map(x => x * 2)' },
       { key: 'filter', desc: '过滤数组', code: 'arr.filter(x => x > 0)' },
@@ -267,6 +279,7 @@ export const CHEATSHEET: CheatCategory[] = [
     id: 'python',
     title: 'Python 速查',
     icon: '🐍',
+    desc: '高频语法、容器、文件与包管理',
     entries: [
       { key: '列表推导', desc: '列表推导式', code: '[x*2 for x in xs if x>0]' },
       { key: '字典推导', desc: '字典推导式', code: '{k: v for k, v in items}' },
@@ -288,6 +301,7 @@ export const CHEATSHEET: CheatCategory[] = [
     id: 'datetime',
     title: '日期时间 & 编码',
     icon: '🕐',
+    desc: '日期格式、时间戳与编码转换',
     entries: [
       { key: '%Y-%m-%d', desc: '年-月-日', code: '2026-08-17' },
       { key: '%H:%M:%S', desc: '时:分:秒' },

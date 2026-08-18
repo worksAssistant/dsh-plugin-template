@@ -38,6 +38,7 @@ const styles: Record<string, CSSProperties> = {
   },
   group: { display: 'flex', flexDirection: 'column', gap: 4 },
   groupTitle: { margin: '8px 0 4px', fontSize: 15, fontWeight: 600 },
+  groupDesc: { margin: '0 0 4px', fontSize: 12, opacity: 0.6 },
   entry: {
     padding: '8px 10px',
     borderRadius: 8,
@@ -117,6 +118,7 @@ export function CheatsheetPanel(): ReactElement {
             <h3 style={styles.groupTitle}>
               {cat.icon} {cat.title}
             </h3>
+            {cat.desc && <div style={styles.groupDesc}>{cat.desc}</div>}
             {cat.entries.map((e) => (
               <div key={cat.id + e.key} style={styles.entry}>
                 <div style={styles.entryHead}>
