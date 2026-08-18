@@ -8,8 +8,9 @@
     "skipLibCheck": true,
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
+    "jsx": "react-jsx",
     "lib": ["ES2022", "DOM"],
-    "types": []
+    "types": ["react"]
   },
   "include": ["src"]
 }
